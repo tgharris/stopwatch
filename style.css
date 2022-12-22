@@ -1,0 +1,218 @@
+:root {
+    --primary: #e03d3d;
+    --light: #fff7e8;
+    --medium: #285b6e;
+    --dark: #03151c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    background: var(--dark);
+    color: var(--light);
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+}
+
+.logo {
+    height: 2.5em;
+    shape-rendering: auto;
+    user-select: none;
+}
+
+.display {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 10vh;
+    font-size: 4.5em;
+    font-weight: 400;
+    font-family: "Lato";
+}
+
+.digits {
+    width: 1.2em;
+    text-transform: full-width;
+    text-align: center;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.btn {
+    appearance: none;
+    background: none;
+    border: none;
+    outline: none;
+    user-select: none;
+
+    width: 70vw;
+    min-width: 300px;
+    padding: 0.5em;
+    margin: 0.3em 0em;
+    border-radius: 0.5em;
+    font-family: "Poppins";
+    font-size: 1.5em;
+    font-weight: 500;
+    background-color: var(--primary);
+    color: var(--light);
+    cursor: pointer;
+}
+
+.fa-play,
+.fa-stop,
+.fa-rotate-left,
+.fa-person-walking-arrow-loop-left {
+    transform: scale(90%);
+    padding: 0px 10px;
+}
+
+.btn:active {
+    background-color: var(--medium);
+    color: var(--light);
+}
+
+.disabled {
+    display: none;
+}
+
+.enabled {
+    display: flex;
+}
+
+.lap-container {
+    justify-content: center;
+    width: 70vw;
+    min-width: 300px;
+    height: 35vh;
+    margin: 1em auto;
+    padding: 0.5em;
+    border-top: 2px solid var(--medium);
+    color: var(--medium);
+    line-height: 2em;
+}
+
+.lap-times {
+    display: flex;
+    flex-direction: column;
+    width: 65vw;
+    min-width: 280px;
+    padding: 0.5em;
+    overflow-y: scroll;
+    font-size: 1.25em;
+}
+
+::-webkit-scrollbar {
+    width: 0.3em;
+}
+
+::-webkit-scrollbar-track {
+    margin-block: 1em;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 100vw;
+}
+
+.column-left {
+    float: left;
+    width: 40%;
+    margin-left: 1em;
+    text-align: left;
+}
+
+.lato {
+    font-family: "Lato";
+}
+
+.column-right {
+    float: right;
+    width: 40%;
+    margin-right: 1em;
+    text-align: right;
+    font-family: "Lato";
+}
+
+@media only screen and (min-width: 768px) {
+    header {
+        margin: 50px;
+    }
+    
+    .logo {
+        height: 3.4em;
+    }
+
+    .display {
+        font-size: 7em;
+    }
+
+    .controls {
+        flex-direction: row;
+    }
+
+    .btn {
+        width: 30vw;
+        max-width: 300px;
+        margin: 0em 0.3em;
+    }
+
+    .lap-container{
+        width: 80vw;
+        max-width: 615px;
+        height: 50vh;
+        margin: 1.5em auto;
+        font-size: 1.2em;
+    }
+
+    .column-left {
+        width: 30%;
+        margin-left: 2em;
+    }
+
+    .column-right {
+        width: 30%;
+        margin-right: 2em;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    header {
+        margin: 75px;
+    }
+    
+    .logo {
+        height: 4.6em;
+    }
+    
+    .display {
+        font-size: 9em;
+    }
+
+    .lap-container {
+        height: 25vh;
+    }
+}
